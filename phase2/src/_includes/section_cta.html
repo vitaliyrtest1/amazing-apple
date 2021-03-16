@@ -1,0 +1,9 @@
+<section class="cta">
+  <h2>{{ include.section.title }}</h2>
+  <div>{{ include.section.subtitle }}</div>
+  <div class="actions grdGrid -middle -center">
+    {%- for current_action in include.section.actions -%}
+      <div class="action">{{ current_action }}</div>
+    {%- endfor -%}
+  </div>
+</section>

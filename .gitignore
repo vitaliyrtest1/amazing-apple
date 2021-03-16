@@ -1,0 +1,31 @@
+# Don't try to do inline comments.  Things break.
+
+# Ignore "ignore me" folder
+.ignoreme
+/.ignoreme
+/.ignoreme/**
+
+# Ignore Stackbit tester
+valsby.sh
+
+# Ignore secrets
+/.env
+/*.env
+/*.env-*
+
+# Ignore clutter from Netlify CLI if using it
+.netlify
+/.netlify
+/.netlify/**
+
+# Ignore clutter from Jekyll
+Gemfile.lock
+.jekyll-cache
+/.jekyll-cache
+/.jekyll-cache/**
+/src/.jekyll-cache
+/src/.jekyll-cache/**
+
+# Ignore "_site", Jekyll's static output folder
+/_site/
+/_site/**

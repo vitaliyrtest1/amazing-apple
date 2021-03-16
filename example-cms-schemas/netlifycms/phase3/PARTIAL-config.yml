@@ -1,0 +1,78 @@
+collections:
+  - name: 'flexible_page'
+    label: 'Flexible Page'
+    folder: 'src/flexible_pages'
+    create: true
+    slug: '{{slug}}'
+    preview_path: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - widget: string
+        name: title
+        label: Page Title
+        required: true
+      - widget: string
+        name: featured_image_url
+        label: 'Featured Image URL'
+        required: true
+      - widget: list
+        name: sections
+        label: Sections
+        types:
+          - name: section_cta
+            label: Call to Action
+            widget: object
+            fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
+              - widget: string
+                name: subtitle
+                label: Subtitle
+                required: true
+              - widget: list
+                name: actions
+                label: Actions
+                types:
+                  - name: action
+                    label: Action
+                    widget: object
+                    fields:
+                      - widget: string
+                        name: text
+                        label: Text
+                        required: true
+                      - widget: string
+                        name: url
+                        label: URL
+                        required: true
+          - name: section_cards
+            label: Card Gallery
+            widget: object
+            fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
+              - widget: list
+                name: cards
+                label: Cards
+                types:
+                  - name: card
+                    label: Card
+                    widget: object
+                    fields:
+                      - widget: string
+                        name: image
+                        label: Image URL
+                        required: true
+                      - widget: string
+                        name: title
+                        label: Title
+                        required: true
+                      - widget: string
+                        name: excerpt
+                        label: Excerpt
+                        required: true

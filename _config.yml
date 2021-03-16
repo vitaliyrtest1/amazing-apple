@@ -1,0 +1,11 @@
+source: ./src
+destination: ./_site
+defaults:
+  - scope:
+      path: flexible_pages
+      type: pages
+    values:
+      permalink: '/:basename'
+      layout: flexible_page
+baseurl: ''
+url: ''

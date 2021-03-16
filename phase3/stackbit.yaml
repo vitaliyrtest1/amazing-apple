@@ -1,0 +1,103 @@
+# Visit https://www.stackbit.com/docs/stackbit-yaml/ to learn more about stackbit.yaml
+
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+
+buildCommand: bundle exec jekyll build
+publishDir: _site
+
+dataDir: null
+pagesDir: src
+
+assets:
+  referenceType: 'static'
+  staticDir: 'src'
+  uploadDir: 'assets/images'
+  publicPath: '/'
+
+models:
+  flexible_page:
+    type: page
+    label: Flexible Page
+
+    folder: 'flexible_pages'
+    urlPath: '/{slug}'
+    filePath: 'flexible_pages/{slug}.md'
+
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+        default: Replace this text with a page title
+      - type: string
+        name: featured_image_url
+        label: Featured Image URL
+        required: true
+        default: /assets/images/header_fireworks.svg
+      - type: list
+        name: sections
+        label: Sections
+        items:
+          type: model
+          models: [section_cta, section_cards]
+  section_cta:
+    type: object
+    label: Call to Action
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: subtitle
+        label: Subtitle
+        required: true
+      - type: list
+        name: actions
+        label: Actions
+        items:
+          type: model
+          models: [action]
+  section_cards:
+    type: object
+    label: Card Gallery
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: list
+        name: cards
+        label: Cards
+        items:
+          type: model
+          models: [card]
+  action:
+    type: object
+    label: Action
+    fields:
+      - type: string
+        name: text
+        label: Text
+        required: true
+      - type: string
+        name: url
+        label: URL
+        required: true
+  card:
+    type: object
+    label: Card
+    fields:
+      - type: string
+        name: image
+        label: Image URL
+        required: true
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: excerpt
+        label: Excerpt
+        required: true

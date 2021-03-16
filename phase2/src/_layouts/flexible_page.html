@@ -1,0 +1,15 @@
+---
+layout: base
+---
+<header>
+  <h1>{{ page.title }}</h1>
+  <figure>
+    <img src="{{ page.featured_image_url }}" />
+  </figure>
+</header>
+<main>
+  {%- for current_section in page.sections -%}
+    {%- capture section_type -%}{{ current_section.type }}.html{%- endcapture -%}
+    {%- include {{ section_type }} section=current_section -%}
+  {%- endfor -%}
+</main>

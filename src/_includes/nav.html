@@ -1,0 +1,20 @@
+<nav class="grdGrid -middle -left">
+  <ul>
+    {%- for pg in site.pages -%}
+      {%- if pg.url == '/index' -%}
+        <li>
+          <a class="{%- if page.url == pg.url -%}active{%- endif -%}" href="/">{{ pg.title }}</a>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+    {% assign sorted = site.pages | sort: 'url' %}
+    {%- for pg in sorted -%}
+      {%- unless pg.url == '/assets/css/main.css' or pg.url == '/index' -%}
+        <li>
+          <a class="{%- if page.url == pg.url -%}active{%- endif -%}" href="{{ pg.url }}">{{ pg.title }}</a>
+        </li>
+      {%- endunless -%}
+    {%- endfor -%}
+  </ul>
+  </div>
+</nav>

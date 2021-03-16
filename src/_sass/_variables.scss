@@ -1,0 +1,16 @@
+$topnav-mainbgcolor: #142c64;
+$topnav-maintextcolor: #f2f2f2;
+$topnav-currpagebgcolor: #207bea;
+$topnav-currpagetextcolor: white;
+$topnav-itemheight: 1.125rem;
+$topnav-itemlrpad: 1rem;
+$topnav-itemlineheight: 3rem;
+$topnav-hoverbgcolor: #f9f9f9;
+$topnav-hovertextcolor: black;
+
+// Breakpoints
+$media-breakpoints: (
+  xs: 480px,
+  sm: 640px,
+  md: 800px,
+) !default;

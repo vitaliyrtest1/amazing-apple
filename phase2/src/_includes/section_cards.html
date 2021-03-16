@@ -1,0 +1,8 @@
+<section class="cards">
+  <h2>{{ include.section.title }}</h2>
+  <div class="gallery grdGrid -middle -left">
+    {%- for current_card in include.section.cards -%}
+      <div class="grdCell -4of12"><div class="card">{{ current_card }}</div></div>
+    {%- endfor -%}
+  </div>
+</section>

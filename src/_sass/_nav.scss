@@ -1,0 +1,40 @@
+// Standardized font-ish stuff
+%nav_text {
+  color: $topnav-maintextcolor;
+  font-size: $topnav-itemheight;
+  line-height: $topnav-itemlineheight;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: middle;
+}
+
+nav {
+  background-color: $topnav-mainbgcolor;
+  ul {
+    @extend .grdGrid;
+    list-style-type: none;
+
+    li {
+      @extend .grdCell;
+    } // end li
+  } // end ul
+
+  a {
+    display: block;
+    text-decoration: none;
+    @extend %nav_text !optional;
+    padding-left: $topnav-itemlrpad;
+    padding-right: $topnav-itemlrpad;
+
+    &.active {
+      background-color: $topnav-currpagebgcolor;
+      color: $topnav-currpagetextcolor;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $topnav-hoverbgcolor;
+      color: $topnav-hovertextcolor;
+    }
+  } // end a
+} // end nav

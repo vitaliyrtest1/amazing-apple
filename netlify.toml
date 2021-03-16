@@ -1,0 +1,8 @@
+[build]
+  base = "./"
+  command = "bundle exec jekyll build" # Jekyll
+  publish = "_site" # Jekyll
+[dev]
+  base = "./"
+  command = "bundle exec jekyll serve" # Jekyll
+  publish = "_site" # Jekyll

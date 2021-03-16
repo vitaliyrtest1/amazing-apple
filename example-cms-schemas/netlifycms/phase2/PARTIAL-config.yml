@@ -1,0 +1,48 @@
+collections:
+  - name: 'flexible_page'
+    label: 'Flexible Page'
+    folder: 'src/flexible_pages'
+    create: true
+    slug: '{{slug}}'
+    preview_path: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - widget: string
+        name: title
+        label: Page Title
+        required: true
+      - widget: string
+        name: featured_image_url
+        label: 'Featured Image URL'
+        required: true
+      - widget: list # Same as before
+        name: sections # Same as before
+        label: Sections # Same as before
+        types:
+          - name: section_cta
+            label: Call to Action
+            widget: object
+            fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
+              - widget: string
+                name: subtitle
+                label: Subtitle
+                required: true
+              - widget: list
+                name: actions
+                label: Actions
+          - name: section_cards
+            label: Card Gallery
+            widget: object
+            fields:
+              - widget: string
+                name: title
+                label: Title
+                required: true
+              - widget: list
+                name: cards
+                label: Cards
