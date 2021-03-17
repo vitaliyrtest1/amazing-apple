@@ -6,6 +6,7 @@ sections:
   - lorem-ipsum
   - lorem-ipsum
   - lorem-ipsum
+  - lorem-ipsum
   - section 2
   - lorem-ipsum
 ---
