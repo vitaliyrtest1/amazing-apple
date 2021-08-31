@@ -1,29 +1,22 @@
-# Visit https://www.stackbit.com/docs/stackbit-yaml/ to learn more about stackbit.yaml
-
 stackbitVersion: ~0.3.0
 ssgName: jekyll
-
 buildCommand: bundle exec jekyll build
 publishDir: _site
-
 dataDir: null
 pagesDir: src
-
 assets:
-  referenceType: 'static'
-  staticDir: 'src'
-  uploadDir: 'assets/images'
-  publicPath: '/'
-
+  referenceType: static
+  staticDir: src
+  uploadDir: assets/images
+  publicPath: /
+cmsName: git
 models:
   flexible_page:
     type: page
     label: Flexible Page
-
-    folder: 'flexible_pages'
+    folder: flexible_pages
     urlPath: '/{slug}'
     filePath: 'flexible_pages/{slug}.md'
-
     fields:
       - type: string
         name: title
